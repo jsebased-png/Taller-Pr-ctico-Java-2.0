@@ -9,7 +9,7 @@ public class Enemigo extends Personaje {
     @Override
     public void realizarAtaqueEspecial(Personaje objetivo) {
         System.out.println(nombre + " arremete contra " + objetivo.getNombre() + ".");
-        objetivo.defender(ataqueBase + 5);
+        objetivo.defender(calcularAtaqueTotal() + 5);
     }
 
     @Override

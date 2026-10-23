@@ -1,5 +1,6 @@
 package co.edu.puj.rpg.principal;
 
+import co.edu.puj.rpg.modelo.Arma;
 import co.edu.puj.rpg.modelo.Enemigo;
 import co.edu.puj.rpg.modelo.Guerrero;
 import co.edu.puj.rpg.modelo.Inventario;
@@ -25,6 +26,7 @@ public class Main {
         List<Personaje> heroes = new ArrayList<>();
         heroes.add(new Guerrero("Thorin", 120, 15, 0, 0, 10));
         heroes.add(new Mago("Gandalf", 80, 25, 1, 1, 50));
+        heroes.get(0).equiparArma(new Arma("Espada larga", 5));
         Personaje heroePrincipal = heroes.get(0);
 
         List<Personaje> enemigos = new ArrayList<>();

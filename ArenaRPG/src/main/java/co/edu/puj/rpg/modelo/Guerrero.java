@@ -11,12 +11,12 @@ public class Guerrero extends Personaje {
 
     public void atacar(Personaje objetivo) {
         System.out.println(nombre + " ataca a " + objetivo.getNombre() + " con su espada.");
-        objetivo.defender(ataqueBase);
+        objetivo.defender(calcularAtaqueTotal());
     }
 
     public void atacar(Personaje objetivo, boolean modoFuria) {
         if (modoFuria) {
-            int dano = ataqueBase * 2;
+            int dano = calcularAtaqueTotal() * 2;
             System.out.println(nombre + " entra en furia y golpea a " + objetivo.getNombre() + ".");
             objetivo.defender(dano);
         } else {
@@ -26,7 +26,7 @@ public class Guerrero extends Personaje {
 
     @Override
     public void realizarAtaqueEspecial(Personaje objetivo) {
-        int dano = ataqueBase + fuerzaEscudo + 10;
+        int dano = calcularAtaqueTotal() + fuerzaEscudo + 10;
         System.out.println(nombre + " lanza un Golpe de Escudo contra " + objetivo.getNombre() + ".");
         objetivo.defender(dano);
     }
